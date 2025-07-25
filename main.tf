@@ -6,3 +6,11 @@ resource "aws_s3_bucket" "example" {
     Environment = "Dev"
   }
 }
+terraform {
+  backend "s3" {
+    bucket = "subodhjoshi"
+    key    = "remote-backend"
+    region = "ap-south-1"
+
+  }
+}
